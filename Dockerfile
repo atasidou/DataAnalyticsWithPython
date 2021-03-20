@@ -64,7 +64,7 @@ RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
 
 USER $NB_UID
 COPY fruit_data_with_colors.txt ${HOME}
-COPY 'Fruit Classification with Python.ipynb' ${HOME}
+COPY "Fruit Classification with Python.ipynb" ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER $NB_UID
