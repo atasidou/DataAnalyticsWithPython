@@ -42,6 +42,7 @@ RUN conda install --quiet --yes \
     'statsmodels=0.12.*' \
     'sympy=1.7.*' \
     'vincent=0.4.*' \
+    'nltk=3.*'\
     'widgetsnbextension=3.5.*'\
     'xlrd=2.0.*' && \
     conda clean --all -f -y && \
