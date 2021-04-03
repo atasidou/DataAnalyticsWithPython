@@ -63,9 +63,9 @@ RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
     fix-permissions "/home/${NB_USER}"
 
 USER $NB_UID
-COPY *.txt ${HOME}
-COPY *.ipynb ${HOME}
-COPY *.csv ${HOME}
+COPY *.txt ${HOME}/
+COPY *.ipynb ${HOME}/
+COPY *.csv ${HOME}/
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER $NB_UID
