@@ -63,8 +63,9 @@ RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
     fix-permissions "/home/${NB_USER}"
 
 USER $NB_UID
-COPY fruit_data_with_colors.txt ${HOME}
-COPY Fruit_Classification_with_Python.ipynb ${HOME}
+COPY *.txt ${HOME}
+COPY *.ipynb ${HOME}
+COPY *.csv ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER $NB_UID
