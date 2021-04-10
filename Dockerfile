@@ -43,6 +43,7 @@ RUN conda install --quiet --yes \
     'sympy=1.7.*' \
     'vincent=0.4.*' \
     'nltk=3.*'\
+    'mlxtend=0.18.*'\
     'widgetsnbextension=3.5.*'\
     'xlrd=2.0.*' && \
     conda clean --all -f -y && \
@@ -67,6 +68,7 @@ USER $NB_UID
 COPY *.txt ${HOME}/
 COPY *.ipynb ${HOME}/
 COPY *.csv ${HOME}/
+COPY *.xlsx ${HOME}/
 COPY nltk_data ${HOME}/nltk_data
 USER root
 RUN chown -R ${NB_UID} ${HOME}
