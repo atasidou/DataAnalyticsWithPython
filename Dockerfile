@@ -68,7 +68,6 @@ USER $NB_UID
 COPY *.txt ${HOME}/
 COPY *.ipynb ${HOME}/
 COPY *.csv ${HOME}/
-COPY *.xlsx ${HOME}/
 COPY nltk_data ${HOME}/nltk_data
 USER root
 RUN chown -R ${NB_UID} ${HOME}
