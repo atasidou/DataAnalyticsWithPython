@@ -68,7 +68,9 @@ USER $NB_UID
 COPY *.txt ${HOME}/
 COPY *.ipynb ${HOME}/
 COPY *.csv ${HOME}/
+COPY *.png ${HOME}/
 COPY nltk_data ${HOME}/nltk_data
+COPY scikit_learn_data ${HOME}/scikit_learn_data
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER $NB_UID
